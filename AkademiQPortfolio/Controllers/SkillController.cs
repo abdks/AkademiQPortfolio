@@ -78,4 +78,22 @@ public class SkillController : Controller
         return RedirectToAction("Index"); //5.adım
     }
 
+
+    [HttpGet]
+    public IActionResult CreateSkill()
+    {
+       
+        return View();
+    }
+
+
+    [HttpPost]
+    public IActionResult CreateSkill(SkillTable table)
+    {
+        _portfolyodbContext.SkillTables.Add(table);
+        _portfolyodbContext.SaveChanges();
+        return RedirectToAction("Index");
+    }
+
+
 }

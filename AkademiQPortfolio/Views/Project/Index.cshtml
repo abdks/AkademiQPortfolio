@@ -1,0 +1,47 @@
+﻿@model List<AkademiQPortfolio.Data.ProjectsTable>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h1>Burası Projeler sayfası</h1>
+
+<div class="container">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>ProjectID</th>
+                <th>ProjectName</th>
+                <th>Title</th>
+                <th>Image</th>
+                <th>Category</th>
+                <th>Güncelle</th>
+                <th>Sil</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            @*             Döngü kurulacak*@
+
+
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.ProjectId</td>
+                    <td>@item.ProjectName</td>
+                    <td>@item.Title</td>
+                    <td>@item.Image</td>
+                    <td>@item.Category.CategoryName</td>
+                    <td><a href="/Project/UpdateProject/@item.ProjectId" class="btn btn-success">Güncelle</a></td>
+                    <td><a href="/Project/DeleteProject/@item.ProjectId" class="btn btn-danger">Sil</a></td>
+                </tr>
+            }
+
+
+        </tbody>
+    </table>
+    <a href="/Project/CreateProject/" class="btn btn-secondary">Yeni Proje Ekle</a>
+
+</div>
+
