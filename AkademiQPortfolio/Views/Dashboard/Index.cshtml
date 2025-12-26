@@ -1,0 +1,261 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Admin Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#135bec",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#0d121b] dark:text-white overflow-x-hidden">
+    <div class="flex h-screen w-full overflow-hidden">
+        <!-- Sidebar -->
+        <aside class="flex w-64 flex-col justify-between border-r border-[#e7ebf3] dark:border-gray-800 bg-white dark:bg-[#1a202c] overflow-y-auto hidden md:flex">
+            <div class="flex flex-col gap-4 p-4">
+                <div class="flex gap-3 items-center mb-6 px-2">
+                    <div class="bg-center bg-no-repeat bg-cover rounded-lg size-10 bg-primary flex items-center justify-center text-white" data-alt="Admin Panel Logo">
+                        <span class="material-symbols-outlined">dataset</span>
+                    </div>
+                    <div class="flex flex-col">
+                        <h1 class="text-[#0d121b] dark:text-white text-base font-bold leading-normal">AdminPanel</h1>
+                        <p class="text-[#4c669a] dark:text-gray-400 text-sm font-normal leading-normal">SaaS Dashboard</p>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-1">
+                    <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-primary/10 text-primary group" href="#">
+                        <span class="material-symbols-outlined">dashboard</span>
+                        <p class="text-sm font-medium leading-normal">Dashboard</p>
+                    </a>
+                    <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-[#4c669a] dark:text-gray-400 hover:bg-[#e7ebf3] dark:hover:bg-gray-700 transition-colors" href="#">
+                        <span class="material-symbols-outlined">group</span>
+                        <p class="text-sm font-medium leading-normal">Users</p>
+                    </a>
+                    <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-[#4c669a] dark:text-gray-400 hover:bg-[#e7ebf3] dark:hover:bg-gray-700 transition-colors" href="#">
+                        <span class="material-symbols-outlined">payments</span>
+                        <p class="text-sm font-medium leading-normal">Revenue</p>
+                    </a>
+                    <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-[#4c669a] dark:text-gray-400 hover:bg-[#e7ebf3] dark:hover:bg-gray-700 transition-colors" href="#">
+                        <span class="material-symbols-outlined">shopping_cart</span>
+                        <p class="text-sm font-medium leading-normal">Orders</p>
+                    </a>
+                    <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-[#4c669a] dark:text-gray-400 hover:bg-[#e7ebf3] dark:hover:bg-gray-700 transition-colors" href="#">
+                        <span class="material-symbols-outlined">analytics</span>
+                        <p class="text-sm font-medium leading-normal">Analytics</p>
+                    </a>
+                    <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-[#4c669a] dark:text-gray-400 hover:bg-[#e7ebf3] dark:hover:bg-gray-700 transition-colors" href="#">
+                        <span class="material-symbols-outlined">settings</span>
+                        <p class="text-sm font-medium leading-normal">Settings</p>
+                    </a>
+                    <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-[#4c669a] dark:text-gray-400 hover:bg-[#e7ebf3] dark:hover:bg-gray-700 transition-colors" href="#">
+                        <span class="material-symbols-outlined">help_center</span>
+                        <p class="text-sm font-medium leading-normal">Support</p>
+                    </a>
+                </div>
+            </div>
+            <div class="p-4 border-t border-[#e7ebf3] dark:border-gray-800">
+                <div class="flex items-center gap-3">
+                    <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="User profile picture placeholder" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCunA3sworgAYWBp3FfJBzsrKq1_1cta8XFxYG_tfDAtJP1wRrCQNlGtBkauMlZzIjnVgfXOj4Vtva7cGjtHWoHHAxR6Ed_2PGtJqWVfC4iMc1Hmy4QElNX2aiaCo-f5g9_J65NaAnJnkpZrVCeZIZdHcAA2Ev0O62oatfi-CQJfUoI_9Jfv2OmXq9rUeku9QOH0UADOPNgBQEc3OR7ImPR3-yLz-i-nKiMkS6nYb0H9febgQTKC7cbBkuAaggor4HKN-37LvEg_uR-");'></div>
+                    <div class="flex flex-col">
+                        <p class="text-[#0d121b] dark:text-white text-sm font-medium">Jane Doe</p>
+                        <p class="text-[#4c669a] dark:text-gray-400 text-xs">Admin</p>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        <!-- Main Content -->
+        <main class="flex flex-1 flex-col h-full relative overflow-y-auto">
+            <!-- Top Navigation -->
+            <header class="sticky top-0 z-20 flex items-center justify-between whitespace-nowrap border-b border-solid border-[#e7ebf3] dark:border-gray-800 bg-white/80 dark:bg-[#1a202c]/80 backdrop-blur-md px-6 py-3">
+                <div class="flex items-center gap-4">
+                    <button class="md:hidden text-[#4c669a]">
+                        <span class="material-symbols-outlined">menu</span>
+                    </button>
+                    <!-- Breadcrumbs -->
+                    <div class="hidden sm:flex flex-wrap items-center gap-2">
+                        <a class="text-[#4c669a] dark:text-gray-400 text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Home</a>
+                        <span class="material-symbols-outlined text-[#4c669a] dark:text-gray-400 text-sm">chevron_right</span>
+                        <span class="text-[#0d121b] dark:text-white text-sm font-medium leading-normal">Dashboard Overview</span>
+                    </div>
+                </div>
+                <div class="flex flex-1 justify-end gap-4 items-center">
+                    <label class="hidden md:flex flex-col min-w-40 !h-10 max-w-64">
+                        <div class="flex w-full flex-1 items-stretch rounded-lg h-full relative">
+                            <div class="text-[#4c669a] absolute left-3 top-2.5 z-10" data-icon="MagnifyingGlass">
+                                <span class="material-symbols-outlined text-[20px]">search</span>
+                            </div>
+                            <input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[#0d121b] dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary border border-[#e7ebf3] dark:border-gray-700 bg-[#f8f9fc] dark:bg-gray-800 h-full placeholder:text-[#4c669a] pl-10 pr-4 text-sm font-normal leading-normal transition-all" placeholder="Search..." value="" />
+                        </div>
+                    </label>
+                    <div class="flex gap-2">
+                        <button class="flex items-center justify-center rounded-lg h-10 w-10 hover:bg-[#e7ebf3] dark:hover:bg-gray-700 text-[#4c669a] dark:text-gray-400 transition-colors relative">
+                            <span class="material-symbols-outlined">notifications</span>
+                            <span class="absolute top-2 right-2 h-2 w-2 rounded-full bg-red-500 ring-2 ring-white dark:ring-[#1a202c]"></span>
+                        </button>
+                        <button class="flex items-center justify-center rounded-lg h-10 w-10 hover:bg-[#e7ebf3] dark:hover:bg-gray-700 text-[#4c669a] dark:text-gray-400 transition-colors">
+                            <span class="material-symbols-outlined">chat_bubble</span>
+                        </button>
+                    </div>
+                </div>
+            </header>
+            <div class="px-6 py-8 flex flex-col gap-8 max-w-[1400px] mx-auto w-full">
+                <!-- Page Heading -->
+                <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+                    <div class="flex flex-col gap-1">
+                        <h1 class="text-[#0d121b] dark:text-white tracking-tight text-3xl font-bold leading-tight">Overview</h1>
+                        <p class="text-[#4c669a] dark:text-gray-400 text-sm font-normal leading-normal">Welcome back, Jane! Here's what's happening with your store today.</p>
+                    </div>
+                    
+                </div>
+                <!-- 9 Card Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Card 1: Active Users -->
+                    <div class="group flex flex-col gap-4 rounded-xl border border-[#e7ebf3] dark:border-gray-800 bg-white dark:bg-[#1a202c] p-6 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300">
+                        <div class="flex justify-between items-start">
+                            <div class="bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400 rounded-lg p-3 w-fit">
+                                <span class="material-symbols-outlined text-[28px]">group</span>
+                            </div>
+                            
+                        </div>
+                        <div>
+                            <h2 class="text-[#0d121b] dark:text-white text-3xl font-bold tracking-tight mb-1">@ViewBag.LastProject</h2>
+                            <p class="text-[#4c669a] dark:text-gray-400 text-sm font-medium">Son eklenen proje</p>
+                        </div>
+                    </div>
+                    <!-- Card 2: Revenue -->
+                    <div class="group flex flex-col gap-4 rounded-xl border border-[#e7ebf3] dark:border-gray-800 bg-white dark:bg-[#1a202c] p-6 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300">
+                        <div class="flex justify-between items-start">
+                            <div class="bg-emerald-50 dark:bg-emerald-900/20 text-emerald-600 dark:text-emerald-400 rounded-lg p-3 w-fit">
+                                <span class="material-symbols-outlined text-[28px]">payments</span>
+                            </div>
+                            
+                        </div>
+                        <div>
+                            <h2 class="text-[#0d121b] dark:text-white text-3xl font-bold tracking-tight mb-1">@ViewBag.TotalServicesCount</h2>
+                            <p class="text-[#4c669a] dark:text-gray-400 text-sm font-medium">Toplam Servis Sayısı</p>
+                        </div>
+                    </div>
+                    <!-- Card 3: New Orders -->
+                    <div class="group flex flex-col gap-4 rounded-xl border border-[#e7ebf3] dark:border-gray-800 bg-white dark:bg-[#1a202c] p-6 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300">
+                        <div class="flex justify-between items-start">
+                            <div class="bg-orange-50 dark:bg-orange-900/20 text-orange-600 dark:text-orange-400 rounded-lg p-3 w-fit">
+                                <span class="material-symbols-outlined text-[28px]">shopping_cart</span>
+                            </div>
+                            
+                        </div>
+                        <div>
+                            <h2 class="text-[#0d121b] dark:text-white text-3xl font-bold tracking-tight mb-1">@ViewBag.FirstCategory</h2>
+                            <p class="text-[#4c669a] dark:text-gray-400 text-sm font-medium">İlk Eklenen Kategori</p>
+                        </div>
+                    </div>
+                    <!-- Card 4: Bounce Rate -->
+                    <div class="group flex flex-col gap-4 rounded-xl border border-[#e7ebf3] dark:border-gray-800 bg-white dark:bg-[#1a202c] p-6 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300">
+                        <div class="flex justify-between items-start">
+                            <div class="bg-red-50 dark:bg-red-900/20 text-red-600 dark:text-red-400 rounded-lg p-3 w-fit">
+                                <span class="material-symbols-outlined text-[28px]">pulse_alert</span>
+                            </div>
+                            
+                        </div>
+                        <div>
+                            <h2 class="text-[#0d121b] dark:text-white text-3xl font-bold tracking-tight mb-1">@ViewBag.FirstProject</h2>
+                            <p class="text-[#4c669a] dark:text-gray-400 text-sm font-medium">İlk Eklenen Proje</p>
+                        </div>
+                    </div>
+                    <!-- Card 5: Session Duration -->
+                    <div class="group flex flex-col gap-4 rounded-xl border border-[#e7ebf3] dark:border-gray-800 bg-white dark:bg-[#1a202c] p-6 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300">
+                        <div class="flex justify-between items-start">
+                            <div class="bg-purple-50 dark:bg-purple-900/20 text-purple-600 dark:text-purple-400 rounded-lg p-3 w-fit">
+                                <span class="material-symbols-outlined text-[28px]">monitor</span>
+                            </div>
+                            
+                        </div>
+                        <div>
+                            <h2 class="text-[#0d121b] dark:text-white text-3xl font-bold tracking-tight mb-1">12m 30s</h2>
+                            <p class="text-[#4c669a] dark:text-gray-400 text-sm font-medium">Avg. Session Duration</p>
+                        </div>
+                    </div>
+                    <!-- Card 6: Open Tickets -->
+                    <div class="group flex flex-col gap-4 rounded-xl border border-[#e7ebf3] dark:border-gray-800 bg-white dark:bg-[#1a202c] p-6 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300">
+                        <div class="flex justify-between items-start">
+                            <div class="bg-teal-50 dark:bg-teal-900/20 text-teal-600 dark:text-teal-400 rounded-lg p-3 w-fit">
+                                <span class="material-symbols-outlined text-[28px]">support_agent</span>
+                            </div>
+                          
+                        </div>
+                        <div>
+                            <h2 class="text-[#0d121b] dark:text-white text-3xl font-bold tracking-tight mb-1">12</h2>
+                            <p class="text-[#4c669a] dark:text-gray-400 text-sm font-medium">Open Support Tickets</p>
+                        </div>
+                    </div>
+                    <!-- Card 7: Server Capacity -->
+                    <div class="group flex flex-col gap-4 rounded-xl border border-[#e7ebf3] dark:border-gray-800 bg-white dark:bg-[#1a202c] p-6 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300">
+                        <div class="flex justify-between items-start">
+                            <div class="bg-indigo-50 dark:bg-indigo-900/20 text-indigo-600 dark:text-indigo-400 rounded-lg p-3 w-fit">
+                                <span class="material-symbols-outlined text-[28px]">cloud</span>
+                            </div>
+                        
+                        </div>
+                        <div>
+                            <h2 class="text-[#0d121b] dark:text-white text-3xl font-bold tracking-tight mb-1">85%</h2>
+                            <p class="text-[#4c669a] dark:text-gray-400 text-sm font-medium">Server Capacity Used</p>
+                        </div>
+                    </div>
+                    <!-- Card 8: MoM Growth -->
+                    <div class="group flex flex-col gap-4 rounded-xl border border-[#e7ebf3] dark:border-gray-800 bg-white dark:bg-[#1a202c] p-6 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300">
+                        <div class="flex justify-between items-start">
+                            <div class="bg-pink-50 dark:bg-pink-900/20 text-pink-600 dark:text-pink-400 rounded-lg p-3 w-fit">
+                                <span class="material-symbols-outlined text-[28px]">rocket_launch</span>
+                            </div>
+                            
+                        </div>
+                        <div>
+                            <h2 class="text-[#0d121b] dark:text-white text-3xl font-bold tracking-tight mb-1">+18%</h2>
+                            <p class="text-[#4c669a] dark:text-gray-400 text-sm font-medium">Month-over-Month Growth</p>
+                        </div>
+                    </div>
+                    <!-- Card 9: Pending Reviews -->
+                    <div class="group flex flex-col gap-4 rounded-xl border border-[#e7ebf3] dark:border-gray-800 bg-white dark:bg-[#1a202c] p-6 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300">
+                        <div class="flex justify-between items-start">
+                            <div class="bg-yellow-50 dark:bg-yellow-900/20 text-yellow-600 dark:text-yellow-400 rounded-lg p-3 w-fit">
+                                <span class="material-symbols-outlined text-[28px]">rate_review</span>
+                            </div>
+                            
+                        </div>
+                        <div>
+                            <h2 class="text-[#0d121b] dark:text-white text-3xl font-bold tracking-tight mb-1">145</h2>
+                            <p class="text-[#4c669a] dark:text-gray-400 text-sm font-medium">Pending Reviews</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
